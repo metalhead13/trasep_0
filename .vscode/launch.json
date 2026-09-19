@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Trasep: seed",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "trasep",
+      "args": ["seed"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "JAVA_HOME": "C:\\Program Files\\Java\\jdk-17"
+      }
+    },
+    {
+      "name": "Trasep: batch",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "trasep",
+      "args": ["batch"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "JAVA_HOME": "C:\\Program Files\\Java\\jdk-17"
+      }
+    },
+    {
+      "name": "Trasep: stream",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "trasep",
+      "args": ["stream", "--emit", "--seconds", "45"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "JAVA_HOME": "C:\\Program Files\\Java\\jdk-17"
+      }
+    }
+  ]
+}

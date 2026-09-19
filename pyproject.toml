@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trasep"
+version = "0.1.0"
+description = "PySpark + Delta Lake medallion pipelines (batch and streaming)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyspark==3.5.5",
+    "delta-spark==3.2.1",
+    "pyyaml==6.0.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[project.scripts]
+trasep = "trasep.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "integration: requires a local Spark session",
+]

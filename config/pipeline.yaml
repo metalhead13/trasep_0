@@ -1,0 +1,23 @@
+spark:
+  app_name: trasep-lakehouse
+  master: local[*]
+  shuffle_partitions: 4
+  timezone: UTC
+
+paths:
+  landing: data/landing
+  lakehouse: data/lakehouse
+  checkpoints: data/checkpoints
+  tools: .tools
+
+streaming:
+  trigger_seconds: 5
+  max_files_per_trigger: 8
+  watermark_minutes: 10
+  emit_interval_seconds: 3
+  emit_files: 6
+
+quality:
+  allowed_status: [placed, paid, shipped, delivered, cancelled, returned]
+  allowed_channels: [web, mobile, store, marketplace]
+  allowed_currencies: [USD, EUR, MXN]
