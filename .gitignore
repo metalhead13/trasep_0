@@ -20,3 +20,6 @@ batch_results.txt
 htmlcov/
 dist/
 build/
+
+batch_probe_output.txt
+test_run_log.txt
